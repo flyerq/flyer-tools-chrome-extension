@@ -1,0 +1,33 @@
+{
+  "name": "Flyer Tools",
+  "description": "Flyer的工具包Chrome扩展程序",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "logo-x16.png",
+    "32": "logo-x32.png",
+    "48": "logo-x48.png",
+    "64": "logo-x64.png",
+    "128": "logo-x128.png",
+    "256": "logo-x256.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

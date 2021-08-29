@@ -1,0 +1,57 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 400px;
+  min-height: 500px;
+
+  &-header {
+    height: 50px;
+    padding: 0 15px;
+    line-height: 50px;
+    color: #fff;
+    background: #001529;
+
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    padding: 9px 15px;
+
+    .ant-form-item {
+      margin-bottom: 0;
+      justify-content: space-between;
+
+      & > .ant-form-item-label {
+        flex: none;
+      }
+
+      & > .ant-form-item-control {
+        flex: none;
+      }
+
+      .ant-form-item-label > label::after {
+        display: inline;
+      }
+    }
+
+    .ant-divider-horizontal {
+      margin: 12px 0;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    height: 50px;
+    padding: 0 15px;
+    justify-content: center;
+    align-items: center;
+    background: #f2f3f5;
+  }
+}
