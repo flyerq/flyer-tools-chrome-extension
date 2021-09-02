@@ -157,7 +157,7 @@ export default function Options () {
       autoComplete="off"
       labelCol={{ span: 5 }}
       labelAlign="left"
-      wrapperCol={{ span: 4 }}
+      wrapperCol={{ span: 10 }}
     >
       <Layout className="options-layout">
         <Layout.Header className="options-header">
@@ -283,6 +283,12 @@ export default function Options () {
                 valuePropName="checked"
               >
                 <Switch checkedChildren="启用" unCheckedChildren="禁用" />
+              </Form.Item>
+              <Form.Item
+                name={['translate', 'codeContainerSelector']}
+                label="代码容器元素CSS选择器"
+              >
+                <Input placeholder="CSS选择器，例如：pre, code, .code-block" />
               </Form.Item>
             </Collapse.Panel>
 

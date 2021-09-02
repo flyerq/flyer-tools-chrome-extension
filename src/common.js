@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { useState, useEffect } from 'react';
 
 // 默认选项数据
@@ -73,6 +74,9 @@ export const defaultOptions = {
   translate: {
     // 谷歌翻译网页时禁止翻译代码展示元素
     noTranslateCode: true,
+
+    // 代码容器元素CSS选择器
+    codeContainerSelector: 'pre, .prism-code',
   },
 
   // YouTube设置
@@ -85,6 +89,10 @@ export const defaultOptions = {
 // 获取选项数据
 export async function getOptions () {
   return new Promise(resolve => chrome.storage.sync.get(defaultOptions, (items) => {
+    if (_.isEmpty(_.trim(items.translate.codeContainerSelector))) {
+      items.translate.codeContainerSelector = defaultOptions.translate.codeContainerSelector;
+    }
+
     resolve(items);
   }));
 };

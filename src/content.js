@@ -67,10 +67,10 @@ const featureList = [
     enable: (feature, options) => _.get(options, feature.key, false),
     installed: false,
     install: (feature, options) => {
-      $('pre').addClass('notranslate');
+      $(options.translate.codeContainerSelector).addClass('notranslate');
     },
     uninstall: (feature, options) => {
-      $('pre').removeClass('notranslate');
+      $(options.translate.codeContainerSelector).removeClass('notranslate');
     },
   },
 
