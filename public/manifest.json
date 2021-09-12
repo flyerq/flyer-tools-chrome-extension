@@ -3,6 +3,7 @@
   "description": "Flyer的工具包Chrome扩展程序",
   "version": "1.0.0",
   "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtPU4UvDcasHjW/m6HgQGZ/03mVEskoRB6N7KrPXHUBoD7M/7dQfnBUj4NineirvtmZxcIkzaY7331fjAJ3wBOd96HrxsuneithVNc7hI6vAjonB8PVG7W649DCi6Qekn8pSlrcpcV5Xbs9A5AGciawlNZj7+LG/8QjljBG6hJWIIxTaOCfQSYsdHwPNvx1JR6ZkP8IVs6YoXTSpNVk1ClZGpReYYdrvKwK4trTPmFm8UbPhCXOzb72hBWlRbmarvVRWpI7Y89JKBghDycjVWB0BUwGtNvcJxk+yiev1LpR2OGS5Q5BdMHqMKr5NmkzJBAKt96XX90AhsZ0zsKW0VaQIDAQAB",
   "icons": {
     "16": "logo-x16.png",
     "32": "logo-x32.png",
