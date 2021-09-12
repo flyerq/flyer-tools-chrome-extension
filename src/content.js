@@ -67,10 +67,28 @@ const featureList = [
     enable: (feature, options) => _.get(options, feature.key, false),
     installed: false,
     install: (feature, options) => {
-      $(options.translate.codeContainerSelector).addClass('notranslate');
+      const selector = options.translate.codeContainerSelector;
+      $(selector).addClass('notranslate');
+
+      // 监听到页面新增DOM元素后为其添加禁止翻译的类名
+      document.body[feature.key] = document.body[feature.key] || {};
+      document.body[feature.key].observer = new MutationObserver(mutations => {
+        $(selector).addClass('notranslate');
+      });
+      
+      // 开始监听DOM变化
+      document.body[feature.key].observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        characterData: false,
+      });
     },
     uninstall: (feature, options) => {
       $(options.translate.codeContainerSelector).removeClass('notranslate');
+
+      // 停止监听
+      document.body[feature.key].observer.disconnect();
     },
   },
 
