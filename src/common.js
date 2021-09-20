@@ -76,7 +76,7 @@ export const defaultOptions = {
     noTranslateCode: true,
 
     // 代码容器元素CSS选择器
-    codeContainerSelector: 'pre, .prism-code',
+    codeContainerSelector: 'pre, .prism-code, code, var, kbd',
   },
 
   // YouTube设置
