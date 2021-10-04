@@ -2,6 +2,7 @@
   "name": "flyer-tools",
   "version": "1.0.0",
   "private": true,
+  "description": "My chrome tools extension",
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
     "@testing-library/jest-dom": "^4.2.4",
